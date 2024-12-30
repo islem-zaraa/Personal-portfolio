@@ -16,7 +16,7 @@ import FloatingIcon from './FloatingIcon';
 import BackgroundGrid from './BackgroundGrid';
 
 const Hero = () => (
-  <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+  <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-24 md:pt-0">
     <BackgroundGrid />
     
     {/* Animated background glow effects */}
@@ -36,10 +36,10 @@ const Hero = () => (
 
     <div className="container mx-auto px-6 relative z-10">
       <div className="max-w-4xl mx-auto text-center">
-        <h1 className="text-6xl md:text-8xl font-bold mb-6">
+        <h1 className="text-5xl md:text-8xl font-bold mb-6">
           <GradientText>John Doe</GradientText>
         </h1>
-        <h2 className="text-2xl md:text-4xl text-gray-400 mb-8 font-light">
+        <h2 className="text-xl md:text-4xl text-gray-400 mb-8 font-light">
           Network Engineer & Security Specialist
         </h2>
         <div className="flex flex-wrap gap-4 justify-center mb-8">
@@ -53,7 +53,7 @@ const Hero = () => (
             Cybersecurity
           </span>
         </div>
-        <p className="text-gray-500 max-w-2xl mx-auto mb-12 text-lg leading-relaxed">
+        <p className="text-gray-500 max-w-2xl mx-auto mb-12 text-base md:text-lg leading-relaxed">
           Securing networks, optimizing databases, and protecting digital assets with
           cutting-edge solutions and industry best practices.
         </p>

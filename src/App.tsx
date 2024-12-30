@@ -1,5 +1,6 @@
 import React from 'react';
 import Nav from './components/nav/Nav';
+import SocialBar from './components/social/SocialBar';
 import Hero from './components/hero/Hero';
 import Portfolio from './components/portfolio/Portfolio';
 import Footer from './components/footer/Footer';
@@ -10,6 +11,7 @@ function App() {
   return (
     <div className="min-h-screen bg-[#050505]">
       <Nav />
+      <SocialBar />
       <main>
         <Hero />
         <Portfolio />
