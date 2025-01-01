@@ -18,14 +18,6 @@ const projects = [
     tags: ['Next.js', 'Firebase', 'Stripe'],
     github: 'https://github.com',
     live: 'https://example.com'
-  },
-  {
-    title: 'Project Three',
-    description: 'AI-powered content management system',
-    image: 'https://images.unsplash.com/photo-1518932945647-7a1c969f8be2',
-    tags: ['Python', 'React', 'AWS'],
-    github: 'https://github.com',
-    live: 'https://example.com'
   }
 ];
 
