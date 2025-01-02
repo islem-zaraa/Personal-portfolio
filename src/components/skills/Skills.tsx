@@ -8,31 +8,31 @@ const skills = [
     name: "Network Infrastructure",
     level: 90,
     icon: Server,
-    color: "from-[#FF512F] to-[#DD2476]"
+    description: "Design and implementation of secure network architectures"
   },
   {
     name: "Network Security",
     level: 85,
     icon: Shield,
-    color: "from-[#FF512F] to-[#F09819]"
+    description: "Advanced threat detection and prevention systems"
   },
   {
     name: "Database Management",
     level: 80,
     icon: Database,
-    color: "from-[#DD2476] to-[#FF512F]"
+    description: "Database optimization and security implementation"
   },
   {
     name: "Cybersecurity",
     level: 75,
     icon: Lock,
-    color: "from-[#F09819] to-[#DD2476]"
+    description: "Penetration testing and vulnerability assessment"
   },
   {
     name: "Cloud Computing",
     level: 85,
     icon: Cloud,
-    color: "from-[#FF512F] to-[#DD2476]"
+    description: "Cloud infrastructure and security management"
   }
 ];
 
@@ -51,27 +51,37 @@ const Skills = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="group relative bg-[#0A0A0A] rounded-xl p-6 hover:bg-[#111] transition-all duration-300"
+            whileHover={{ scale: 1.02 }}
+            className="relative group"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-[#FF512F]/10 to-[#DD2476]/10 rounded-xl group-hover:opacity-100 opacity-0 transition-opacity" />
-            <div className="relative z-10">
-              <div className="mb-4 flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className={`p-2 rounded-lg bg-gradient-to-r ${skill.color} group-hover:scale-110 transition-transform`}>
-                    <skill.icon className="w-5 h-5 text-white" />
-                  </div>
-                  <h3 className="font-medium text-white">{skill.name}</h3>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#FF512F] to-[#DD2476] rounded-xl blur-md opacity-20 group-hover:opacity-30 transition-opacity" />
+            <div className="relative bg-[#0A0A0A] rounded-xl p-6 h-full border border-[#1A1A1A] group-hover:border-[#FF512F]/50 transition-colors">
+              <div className="flex items-start gap-4 mb-4">
+                <div className="p-3 rounded-xl bg-gradient-to-br from-[#FF512F] to-[#DD2476] group-hover:scale-110 transition-transform">
+                  <skill.icon className="w-6 h-6 text-white" />
                 </div>
-                <span className="text-[#FF512F] font-semibold">{skill.level}%</span>
+                <div>
+                  <h3 className="font-semibold text-white mb-1 group-hover:text-[#FF512F] transition-colors">
+                    {skill.name}
+                  </h3>
+                  <p className="text-sm text-gray-400">{skill.description}</p>
+                </div>
               </div>
-              <div className="h-2 bg-[#1A1A1A] rounded-full overflow-hidden">
-                <motion.div
-                  className={`h-full bg-gradient-to-r ${skill.color}`}
-                  initial={{ width: 0 }}
-                  whileInView={{ width: `${skill.level}%` }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1, ease: "easeOut" }}
-                />
+              
+              <div className="relative mt-6">
+                <div className="flex justify-between mb-2">
+                  <span className="text-sm text-gray-400">Proficiency</span>
+                  <span className="text-sm text-[#FF512F]">{skill.level}%</span>
+                </div>
+                <div className="h-1.5 bg-[#1A1A1A] rounded-full overflow-hidden">
+                  <motion.div
+                    className="h-full bg-gradient-to-r from-[#FF512F] to-[#DD2476]"
+                    initial={{ width: 0 }}
+                    whileInView={{ width: `${skill.level}%` }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                  />
+                </div>
               </div>
             </div>
           </motion.div>

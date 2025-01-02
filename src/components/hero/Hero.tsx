@@ -52,8 +52,8 @@ const Hero = () => (
           </span>
         </div>
         <p className="text-gray-500 max-w-2xl mx-auto mb-12 text-base md:text-lg leading-relaxed">
-          Implementing networks, optimizing databases, and protecting digital assets with
-          Innovative solutions and industry best practices.
+          Securing networks, optimizing databases, and protecting digital assets with
+          cutting-edge solutions and industry best practices.
         </p>
         <HeroButton href="#work">Explore My Work</HeroButton>
       </div>
