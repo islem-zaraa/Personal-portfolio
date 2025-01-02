@@ -141,7 +141,7 @@ This project is licensed under the MIT License.
 If you have any questions or suggestions, feel free to reach out:
 
 - **Email**: islemzaraapro@gmail.com
-- **LinkedIn**: [Your LinkedIn Profile](https://linkedin.com/in/islem-zaraa)
+- **LinkedIn**: [LinkedIn Profile](https://linkedin.com/in/islem-zaraa)
 - **GitHub**: [islem-zaraa](https://github.com/islem-zaraa)
 
 ---
