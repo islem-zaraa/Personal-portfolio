@@ -9,6 +9,7 @@ Welcome to my personal portfolio project! This repository is a modern and profes
 - **Project Showcase**: A dedicated section to highlight projects with detailed descriptions and links.
 - **Interactive Animations**: Smooth transitions and engaging animations powered by modern libraries.
 - **Contact Form**: Easily reach out via an integrated contact form.
+- **Security Focused**: Implements modern web security best practices.
 
 ## Tech Stack
 
@@ -30,6 +31,13 @@ Welcome to my personal portfolio project! This repository is a modern and profes
   - ESLint
   - TypeScript Configurations
 
+- **Security Features**:
+  - Content Security Policy
+  - XSS Protection
+  - CSRF Protection
+  - Secure Headers
+  - Automated Security Scanning
+
 ## Project Structure
 
 ### Root Directory
@@ -45,6 +53,9 @@ Welcome to my personal portfolio project! This repository is a modern and profes
 - `tailwind.config.js`: Tailwind CSS configuration.
 - `tsconfig.*.json`: TypeScript configurations for app and node.
 - `vite.config.ts`: Vite configuration.
+- `.github/workflows`: CI/CD workflows for security scanning.
+- `SECURITY.md`: Security policy and reporting instructions.
+- `.env.example`: Example environment variables template.
 
 ### `src` Directory
 
@@ -104,14 +115,35 @@ Follow these steps to set up the project locally:
    yarn install
    ```
 
-4. Start the development server:
+4. Create your environment file:
+   ```bash
+   cp .env.example .env.local
+   # Then edit .env.local with your configuration
+   ```
+
+5. Start the development server:
    ```bash
    npm run dev
    # or
    yarn dev
    ```
 
-5. Open your browser and navigate to `http://localhost:3000` to view the portfolio.
+6. Open your browser and navigate to `http://localhost:3000` to view the portfolio.
+
+## Security Best Practices
+
+This project follows these security best practices:
+
+1. **Environment Variables**: Sensitive data is stored in environment variables, never in the codebase
+2. **Content Security Policy**: Restricts which resources can be loaded, preventing XSS attacks
+3. **Input Validation**: All user inputs are validated before processing
+4. **Dependency Management**: Regular updates to dependencies to patch security vulnerabilities
+5. **Security Headers**: Implementation of recommended security headers
+6. **Automated Scanning**: GitHub Actions workflow that runs security scans
+
+## Reporting Security Issues
+
+If you discover a security vulnerability, please follow the guidelines in [SECURITY.md](SECURITY.md).
 
 ## Contributing
 
