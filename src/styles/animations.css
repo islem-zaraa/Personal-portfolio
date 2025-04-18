@@ -16,8 +16,21 @@
   }
 }
 
+@keyframes moveGradient {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 .animate-float {
   animation: float 3s ease-in-out infinite;
+}
+
+.animate-move-gradient {
+  animation: moveGradient 4s linear infinite;
 }
 
 .glow {
