@@ -21,7 +21,7 @@
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(100%);
+    transform: translateX(-75%);
   }
 }
 
@@ -31,6 +31,18 @@
 
 .animate-move-gradient {
   animation: moveGradient 4s linear infinite;
+}
+
+.border-gradient-mask {
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff, #fff);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
 }
 
 .glow {
