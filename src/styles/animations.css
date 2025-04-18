@@ -25,12 +25,37 @@
   }
 }
 
+@keyframes borderRotate {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 300% 0%;
+  }
+}
+
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
 
 .animate-move-gradient {
   animation: moveGradient 4s linear infinite;
+}
+
+.nav-border-gradient {
+  position: relative;
+  background: linear-gradient(90deg, #FF512F, #DD2476, #FF512F, #DD2476);
+  background-size: 300% 100%;
+  animation: borderRotate 3s linear infinite;
+}
+
+.nav-border-gradient::before {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background: transparent;
+  border-radius: inherit;
+  z-index: 1;
 }
 
 .border-gradient-mask {
