@@ -42,6 +42,33 @@
   animation: moveGradient 4s linear infinite;
 }
 
+/* Gradient border that moves */
+.border-gradient {
+  padding: 2px;
+  border-radius: 9999px; /* Equivalent to rounded-full */
+  position: relative;
+  background-clip: padding-box;
+  background-color: transparent;
+}
+
+.border-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 9999px;
+  padding: 2px;
+  background: linear-gradient(90deg, #FF512F, #DD2476, #FF512F, #DD2476);
+  background-size: 300% 100%;
+  animation: borderRotate 3s linear infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
 .nav-border-gradient {
   position: relative;
   background: linear-gradient(90deg, #FF512F, #DD2476, #FF512F, #DD2476);

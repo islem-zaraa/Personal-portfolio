@@ -5,7 +5,7 @@ const Nav = () => {
   return (
     <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full px-4 md:px-0">
       <div className="max-w-fit mx-auto">
-        <div className="relative p-[2px] rounded-full nav-border-gradient">
+        <div className="relative border-gradient">
           <div className="backdrop-blur-lg bg-black/50 rounded-full px-6 md:px-10 py-4">
             <div className="flex items-center gap-6 md:gap-10">
               <NavLink href="#home">Home</NavLink>
