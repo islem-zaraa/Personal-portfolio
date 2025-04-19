@@ -16,8 +16,17 @@ import GradientText from '../ui/GradientText';
 import HeroButton from './HeroButton';
 import FloatingIcon from './FloatingIcon';
 import BackgroundGrid from './BackgroundGrid';
+import TypeWriter from '../ui/TypeWriter';
 
 const Hero = () => {
+  // Array of professional titles that showcase skills in an engaging way
+  const titles = [
+    "Network Engineer & Cybersecurity Analyst",
+    "Digital Fortress Builder 🔒",
+    "Cyber Threat Hunter & Defender",
+    "Making Networks Impenetrable 💪"
+  ];
+
   const textVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: (custom: number) => ({
@@ -62,13 +71,18 @@ const Hero = () => {
           </motion.h1>
           
           <motion.h2 
-            className="text-xl md:text-4xl text-gray-400 mb-8 font-light"
+            className="text-xl md:text-4xl text-gray-400 mb-8 font-light min-h-16"
             initial="hidden"
             animate="visible"
             variants={textVariants}
             custom={1}
           >
-            Network Engineer & Cybersecurity Analyst
+            <TypeWriter 
+              texts={titles} 
+              typingSpeed={80} 
+              deletingSpeed={40}
+              delayBetween={2000}
+            />
           </motion.h2>
           
           <motion.div 

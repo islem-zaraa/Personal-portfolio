@@ -12,6 +12,20 @@
   .nav-icon {
     @apply hover:animate-float;
   }
+  
+  .typewriter-cursor {
+    @apply inline-block w-1 h-6 ml-1 bg-gradient-to-r from-[#FF512F] to-[#DD2476];
+    animation: blink 1s step-end infinite;
+  }
+}
+
+@keyframes blink {
+  from, to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 @keyframes float {

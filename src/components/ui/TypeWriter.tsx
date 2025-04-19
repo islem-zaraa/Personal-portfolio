@@ -20,7 +20,16 @@ const TypeWriter: React.FC<TypeWriterProps> = ({
   const [isDeleting, setIsDeleting] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
 
+  // Initialize with the first text on component mount
   useEffect(() => {
+    if (texts.length > 0) {
+      setCurrentText('');
+    }
+  }, [texts]);
+
+  useEffect(() => {
+    if (texts.length === 0) return;
+    
     let timeout: ReturnType<typeof setTimeout>;
 
     if (isPaused) {
@@ -58,7 +67,7 @@ const TypeWriter: React.FC<TypeWriterProps> = ({
   return (
     <span className={className}>
       {currentText}
-      <span className="inline-block w-1 h-6 ml-1 bg-gradient-to-r from-[#FF512F] to-[#DD2476] animate-pulse"></span>
+      <span className="typewriter-cursor"></span>
     </span>
   );
 };
