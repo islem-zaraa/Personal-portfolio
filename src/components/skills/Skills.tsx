@@ -1,75 +1,111 @@
-import React from 'react';
+import React, { useState } from 'react';
 import GradientText from '../ui/GradientText';
 import { motion } from 'framer-motion';
-import { Shield, Server, Database, Lock, Cloud, Code, Globe, Layout, Monitor, PenTool } from 'lucide-react';
+import { 
+  Server, 
+  Shield, 
+  Database, 
+  Code, 
+  Globe, 
+  Layout, 
+  Terminal,
+  HardDrive,
+  Network,
+  Cpu
+} from 'lucide-react';
 
 const skills = [
+  // Network Engineering Skills
   {
     name: "Network Infrastructure",
     level: 90,
-    icon: Server,
+    icon: Network,
     description: "Design and implementation of secure network architectures",
-    category: "Infrastructure"
+    category: "Network Engineering"
   },
   {
     name: "Network Security",
     level: 85,
     icon: Shield,
     description: "Advanced threat detection and prevention systems",
-    category: "Security"
+    category: "Network Engineering"
   },
+  {
+    name: "Cisco Networking",
+    level: 88,
+    icon: Server,
+    description: "Configuration and maintenance of Cisco network devices",
+    category: "Network Engineering"
+  },
+  {
+    name: "VPN & Firewalls",
+    level: 82,
+    icon: Globe,
+    description: "Implementation of secure VPN connections and firewall rules",
+    category: "Network Engineering"
+  },
+
+  // Database Administration Skills
   {
     name: "Database Management",
     level: 80,
     icon: Database,
-    description: "Database optimization and security implementation",
-    category: "Backend"
+    description: "Design and optimization of database systems",
+    category: "Database Administration"
   },
   {
-    name: "Cybersecurity",
-    level: 75,
-    icon: Lock,
-    description: "Penetration testing and vulnerability assessment",
-    category: "Security"
-  },
-  {
-    name: "Cloud Computing",
+    name: "SQL",
     level: 85,
-    icon: Cloud,
-    description: "Cloud infrastructure and security management",
-    category: "Infrastructure"
+    icon: Code,
+    description: "Advanced SQL query optimization and database performance tuning",
+    category: "Database Administration"
   },
+  {
+    name: "Database Security",
+    level: 75,
+    icon: HardDrive,
+    description: "Implementation of database security protocols and access controls",
+    category: "Database Administration"
+  },
+
+  // Full Stack Development Skills
   {
     name: "Frontend Development",
     level: 88,
     icon: Layout,
     description: "Creating responsive and interactive user interfaces",
-    category: "Frontend"
+    category: "Full-stack Dev"
   },
   {
     name: "Backend Development",
     level: 82,
-    icon: Code,
+    icon: Terminal,
     description: "Building scalable server-side applications",
-    category: "Backend"
+    category: "Full-stack Dev"
   },
   {
-    name: "Web Technologies",
-    level: 85,
-    icon: Globe,
-    description: "Modern web frameworks and technologies",
-    category: "Frontend"
+    name: "React & Vue",
+    level: 86,
+    icon: Cpu,
+    description: "Development of modern web applications using React and Vue frameworks",
+    category: "Full-stack Dev"
   }
 ];
 
 const Skills = () => {
-  const [selectedCategory, setSelectedCategory] = React.useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [showAll, setShowAll] = useState(false);
   
   const categories = [...new Set(skills.map(skill => skill.category))];
   
   const filteredSkills = selectedCategory 
     ? skills.filter(skill => skill.category === selectedCategory)
     : skills;
+
+  // Limit to 6 skills initially when showing "All" category
+  const displayedSkills = showAll || selectedCategory 
+    ? filteredSkills 
+    : filteredSkills.slice(0, 6);
 
   return (
     <section id="skills" className="py-20 bg-[#050505] overflow-hidden">
@@ -84,7 +120,7 @@ const Skills = () => {
             <GradientText>Technical Skills</GradientText>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            A comprehensive overview of my technical expertise and proficiency levels across various domains.
+            A comprehensive overview of my technical expertise in Network Engineering, Database Administration, and Full Stack Development.
           </p>
         </motion.div>
         
@@ -120,7 +156,7 @@ const Skills = () => {
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredSkills.map((skill, index) => (
+          {displayedSkills.map((skill, index) => (
             <motion.div
               key={skill.name}
               initial={{ opacity: 0, y: 30 }}
@@ -168,6 +204,23 @@ const Skills = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Show More/Less Button - Only show if we're on the "All" category and there are more than 6 skills */}
+        {!selectedCategory && filteredSkills.length > 6 && (
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex justify-center mt-12"
+          >
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="px-6 py-3 rounded-full text-white font-medium bg-gradient-to-r from-[#FF512F] to-[#DD2476] hover:shadow-lg hover:shadow-[#FF512F]/20 transition-all duration-300"
+            >
+              {showAll ? 'Show Less' : 'Show More Skills'}
+            </button>
+          </motion.div>
+        )}
       </div>
     </section>
   );
