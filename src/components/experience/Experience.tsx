@@ -1,7 +1,19 @@
 import React, { useState } from 'react';
 import GradientText from '../ui/GradientText';
 import { motion } from 'framer-motion';
-import { Briefcase, Calendar, ArrowUpRight, Building, Award, Users } from 'lucide-react';
+import { 
+  Briefcase, 
+  Calendar, 
+  ArrowUpRight, 
+  Building, 
+  Award, 
+  Users, 
+  Network, 
+  Shield, 
+  Database,
+  Server,
+  Code
+} from 'lucide-react';
 
 interface Experience {
   title: string;
@@ -29,7 +41,7 @@ const experiences: Experience[] = [
       "Reduced downtime by 75% through proactive monitoring"
     ],
     type: 'work',
-    icon: Building,
+    icon: Network,
     color: "from-[#FF512F] to-[#DD2476]"
   },
   {
@@ -43,7 +55,7 @@ const experiences: Experience[] = [
       "Recognized for excellence in practical assessments"
     ],
     type: 'certificate',
-    icon: Award,
+    icon: Shield,
     color: "from-[#FF512F] to-[#DD2476]"
   },
   {
@@ -59,7 +71,7 @@ const experiences: Experience[] = [
       "Contributed to company security policy updates"
     ],
     type: 'work',
-    icon: Users,
+    icon: Server,
     color: "from-[#FF512F] to-[#DD2476]"
   }
 ];
@@ -148,8 +160,8 @@ const Experience = () => {
               <div className="flex flex-col md:flex-row gap-8">
                 {/* Timeline dot */}
                 <div className="relative">
-                  <div className={`sticky top-8 w-24 h-24 rounded-2xl bg-[#0D0D0D] border border-[#1A1A1A] p-6 group-hover:bg-gradient-to-br ${exp.color} group-hover:bg-opacity-10 transition-all duration-500`}>
-                    <exp.icon className={`w-12 h-12 text-transparent bg-clip-text bg-gradient-to-r ${exp.color}`} />
+                  <div className={`sticky top-8 w-24 h-24 rounded-2xl bg-[#0D0D0D] border border-[#1A1A1A] p-6 group-hover:bg-gradient-to-br ${exp.color} group-hover:border-transparent group-hover:bg-opacity-10 transition-all duration-500 flex items-center justify-center`}>
+                    <exp.icon className={`w-12 h-12 text-[#FF512F] group-hover:text-white transition-all duration-500`} />
                   </div>
                   <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-gradient-to-r ${exp.color}`} />
                 </div>
