@@ -18,28 +18,24 @@ const skills = [
   // Network Engineering Skills
   {
     name: "Network Infrastructure",
-    level: 90,
     icon: Network,
     description: "Design and implementation of secure network architectures",
     category: "Network Engineering"
   },
   {
     name: "Network Security",
-    level: 85,
     icon: Shield,
     description: "Advanced threat detection and prevention systems",
     category: "Network Engineering"
   },
   {
     name: "Cisco Networking",
-    level: 88,
     icon: Server,
     description: "Configuration and maintenance of Cisco network devices",
     category: "Network Engineering"
   },
   {
     name: "VPN & Firewalls",
-    level: 82,
     icon: Globe,
     description: "Implementation of secure VPN connections and firewall rules",
     category: "Network Engineering"
@@ -48,21 +44,18 @@ const skills = [
   // Database Administration Skills
   {
     name: "Database Management",
-    level: 80,
     icon: Database,
     description: "Design and optimization of database systems",
     category: "Database Administration"
   },
   {
     name: "SQL",
-    level: 85,
     icon: Code,
     description: "Advanced SQL query optimization and database performance tuning",
     category: "Database Administration"
   },
   {
     name: "Database Security",
-    level: 75,
     icon: HardDrive,
     description: "Implementation of database security protocols and access controls",
     category: "Database Administration"
@@ -71,21 +64,18 @@ const skills = [
   // Full Stack Development Skills
   {
     name: "Frontend Development",
-    level: 88,
     icon: Layout,
     description: "Creating responsive and interactive user interfaces",
     category: "Full-stack Dev"
   },
   {
     name: "Backend Development",
-    level: 82,
     icon: Terminal,
     description: "Building scalable server-side applications",
     category: "Full-stack Dev"
   },
   {
     name: "React & Vue",
-    level: 86,
     icon: Cpu,
     description: "Development of modern web applications using React and Vue frameworks",
     category: "Full-stack Dev"
@@ -181,25 +171,9 @@ const Skills = () => {
                   </div>
                 </div>
                 
-                <p className="text-gray-400 text-sm mb-6">{skill.description}</p>
-                
-                <div className="mt-auto">
-                  <div className="flex justify-between mb-2 items-center">
-                    <span className="text-sm text-gray-500">Proficiency</span>
-                    <span className="text-sm font-medium text-white bg-[#1A1A1A] px-2 py-0.5 rounded">
-                      {skill.level}%
-                    </span>
-                  </div>
-                  <div className="h-2 bg-[#1A1A1A] rounded-full overflow-hidden">
-                    <motion.div
-                      className="h-full bg-gradient-to-r from-[#FF512F] to-[#DD2476]"
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${skill.level}%` }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1, ease: "easeOut" }}
-                    />
-                  </div>
-                </div>
+                <p className="text-gray-400 text-sm">
+                  {skill.description}
+                </p>
               </div>
             </motion.div>
           ))}
