@@ -1,15 +1,21 @@
 import React from 'react';
 import { 
-  Database, 
-  Shield, 
-  Network, 
-  Server, 
-  Lock, 
-  Wifi, 
-  HardDrive,
-  Cloud,
-  Key,
-  Code
+  Code,
+  Container,
+  FileCode,
+  Github,
+  LayoutGrid,
+  Layers,
+  Monitor,
+  Smartphone,
+  Terminal,
+  GitBranch,
+  Cpu,
+  Braces,
+  Brackets,
+  Bug,
+  Database,
+  Hash
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import GradientText from '../ui/GradientText';
@@ -19,12 +25,11 @@ import BackgroundGrid from './BackgroundGrid';
 import TypeWriter from '../ui/TypeWriter';
 
 const Hero = () => {
-  // Array of professional titles that showcase skills in an engaging way
+  // Simple array of phrases that cycle through the typewriter
   const titles = [
     "Network Engineer & Cybersecurity Analyst",
-    "Digital Fortress Builder 🔒",
-    "Cyber Threat Hunter & Defender",
-    "Making Networks Impenetrable 💪"
+    "welcome",
+    "thanks"
   ];
 
   const textVariants = {
@@ -47,16 +52,25 @@ const Hero = () => {
       <div className="glow top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2" />
       <div className="glow bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2" />
 
-      <FloatingIcon Icon={Database} position="top-1/4 left-1/4" delay={0} />
-      <FloatingIcon Icon={Shield} position="top-1/3 right-1/4" delay={0.5} />
-      <FloatingIcon Icon={Network} position="bottom-1/4 left-1/3" delay={1} />
-      <FloatingIcon Icon={Server} position="top-1/2 right-1/3" delay={1.5} />
-      <FloatingIcon Icon={Lock} position="bottom-1/3 right-1/4" delay={2} />
-      <FloatingIcon Icon={Wifi} position="top-2/3 left-1/4" delay={2.5} />
-      <FloatingIcon Icon={HardDrive} position="bottom-1/4 right-1/3" delay={3} />
-      <FloatingIcon Icon={Cloud} position="top-1/4 right-1/2" delay={3.5} />
-      <FloatingIcon Icon={Key} position="bottom-1/2 left-1/3" delay={4} />
-      <FloatingIcon Icon={Code} position="top-1/3 left-2/3" delay={4.5} />
+      {/* Layer 1 - Original icons */}
+      <FloatingIcon Icon={Code} position="top-1/4 left-1/4" delay={0} />
+      <FloatingIcon Icon={Terminal} position="top-1/3 right-1/4" delay={0.5} />
+      <FloatingIcon Icon={Github} position="bottom-1/4 left-1/3" delay={1} />
+      <FloatingIcon Icon={FileCode} position="top-1/2 right-1/3" delay={1.5} />
+      <FloatingIcon Icon={LayoutGrid} position="bottom-1/3 right-1/4" delay={2} />
+      <FloatingIcon Icon={Layers} position="top-2/3 left-1/4" delay={2.5} />
+      <FloatingIcon Icon={Cpu} position="bottom-1/4 right-1/3" delay={3} />
+      <FloatingIcon Icon={Container} position="top-1/4 right-1/2" delay={3.5} />
+      <FloatingIcon Icon={GitBranch} position="bottom-1/2 left-1/3" delay={4} />
+      <FloatingIcon Icon={Smartphone} position="top-1/3 left-2/3" delay={4.5} />
+
+      {/* Layer 2 - Additional icons */}
+      <FloatingIcon Icon={Braces} position="top-1/5 left-1/5" delay={1.2} />
+      <FloatingIcon Icon={Hash} position="bottom-1/5 right-1/5" delay={2.3} />
+      <FloatingIcon Icon={Brackets} position="top-3/5 right-2/5" delay={3.4} />
+      <FloatingIcon Icon={Bug} position="bottom-2/5 left-2/5" delay={0.7} />
+      <FloatingIcon Icon={Monitor} position="top-3/4 left-1/4" delay={2.8} />
+      <FloatingIcon Icon={Database} position="bottom-3/4 right-1/3" delay={3.9} />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -71,7 +85,7 @@ const Hero = () => {
           </motion.h1>
           
           <motion.h2 
-            className="text-xl md:text-4xl text-gray-400 mb-8 font-light min-h-16"
+            className="text-xl md:text-4xl text-gray-400 mb-4 font-light min-h-16"
             initial="hidden"
             animate="visible"
             variants={textVariants}
@@ -95,8 +109,7 @@ const Hero = () => {
             {[
               "Network Engineering", 
               "Database Administration", 
-              "Cybersecurity",
-              "Cloud Computing"
+              "Full-stack Dev"
             ].map((skill, index) => (
               <span 
                 key={skill}
