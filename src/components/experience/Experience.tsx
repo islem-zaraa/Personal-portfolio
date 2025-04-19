@@ -156,7 +156,7 @@ const Experience = () => {
                 {/* Timeline dot */}
                 <div className="relative">
                   <div className={`sticky top-8 w-24 h-24 rounded-2xl bg-[#0D0D0D] border border-[#1A1A1A] p-6 group-hover:bg-gradient-to-br ${exp.color} group-hover:border-transparent group-hover:bg-opacity-10 transition-all duration-500 flex items-center justify-center`}>
-                    <exp.icon className={`w-12 h-12 text-[#FF512F] group-hover:text-white transition-all duration-500`} />
+                    <exp.icon className={`w-12 h-12 text-[#FF512F] group-hover:text-white`} />
                   </div>
                   <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-gradient-to-r ${exp.color}`} />
                   
