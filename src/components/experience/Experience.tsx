@@ -153,14 +153,14 @@ const Experience = () => {
               className="group relative mb-12 last:mb-0"
             >
               <div className="flex flex-col md:flex-row gap-8">
-                {/* Timeline dot */}
-                <div className="relative">
+                {/* Timeline dot - hidden on mobile */}
+                <div className="relative hidden md:block">
                   <div className={`sticky top-8 w-24 h-24 rounded-2xl bg-[#0D0D0D] border border-[#1A1A1A] p-6 group-hover:bg-gradient-to-br ${exp.color} group-hover:border-transparent group-hover:bg-opacity-10 transition-all duration-500 flex items-center justify-center`}>
                     <exp.icon className={`w-12 h-12 text-[#FF512F] group-hover:text-white`} />
                   </div>
                   <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-gradient-to-r ${exp.color}`} />
                   
-                  {/* Single timeline connector for all cards */}
+                  {/* Single timeline connector for all cards - hidden on mobile */}
                   <div className="absolute left-1/2 top-[85px] h-[120px] w-px bg-gradient-to-b from-[#FF512F] to-transparent -translate-x-1/2" />
                 </div>
 
