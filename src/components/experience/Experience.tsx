@@ -152,11 +152,6 @@ const Experience = () => {
               transition={{ duration: 0.5, delay: index * 0.2 }}
               className="group relative mb-12 last:mb-0"
             >
-              {/* Timeline connector */}
-              {index !== filteredExperiences.length - 1 && (
-                <div className="absolute left-[45px] top-[85px] bottom-[-40px] w-px bg-gradient-to-b from-[#FF512F] to-transparent" />
-              )}
-
               <div className="flex flex-col md:flex-row gap-8">
                 {/* Timeline dot */}
                 <div className="relative">
@@ -164,6 +159,9 @@ const Experience = () => {
                     <exp.icon className={`w-12 h-12 text-[#FF512F] group-hover:text-white transition-all duration-500`} />
                   </div>
                   <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-gradient-to-r ${exp.color}`} />
+                  
+                  {/* Single timeline connector for all cards */}
+                  <div className="absolute left-1/2 top-[85px] h-[120px] w-px bg-gradient-to-b from-[#FF512F] to-transparent -translate-x-1/2" />
                 </div>
 
                 {/* Content */}
