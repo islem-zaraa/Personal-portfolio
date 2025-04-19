@@ -44,7 +44,7 @@ const experiences: Experience[] = [
     ],
     type: 'certificate',
     icon: Award,
-    color: "from-[#4776E6] to-[#8E54E9]"
+    color: "from-[#FF512F] to-[#DD2476]"
   },
   {
     title: "Junior Security Analyst",
@@ -85,10 +85,10 @@ const Experience = () => {
           className="text-center mb-12"
         >
           <h2 className="text-4xl font-bold mb-4">
-            <GradientText>Professional Experience</GradientText>
+            <GradientText>Experiences and Certifications</GradientText>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            A journey through my professional career in network security and engineering
+            A showcase of my professional journey and industry qualifications in network engineering, database administration, and full-stack development
           </p>
         </motion.div>
 
@@ -122,7 +122,7 @@ const Experience = () => {
             onClick={() => setActiveFilter('certificate')}
             className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
               activeFilter === 'certificate'
-                ? 'bg-gradient-to-r from-[#4776E6] to-[#8E54E9] text-white shadow-lg shadow-[#4776E6]/20'
+                ? 'bg-gradient-to-r from-[#FF512F] to-[#DD2476] text-white shadow-lg shadow-[#FF512F]/20'
                 : 'bg-[#1A1A1A] text-gray-400 hover:text-white'
             }`}
           >
@@ -182,7 +182,7 @@ const Experience = () => {
                           exp.type === 'work' 
                             ? 'bg-gradient-to-r from-[#FF512F]/20 to-[#DD2476]/20' 
                             : exp.type === 'certificate'
-                              ? 'bg-gradient-to-r from-[#4776E6]/20 to-[#8E54E9]/20'
+                              ? 'bg-gradient-to-r from-[#FF512F]/20 to-[#DD2476]/20'
                               : 'bg-[#1A1A1A]'
                         }`}>
                           {exp.type === 'work' ? 'Work Experience' : exp.type === 'certificate' ? 'Certification' : 'Education'}
