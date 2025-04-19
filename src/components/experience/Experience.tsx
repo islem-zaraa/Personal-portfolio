@@ -76,12 +76,10 @@ const experiences: Experience[] = [
   }
 ];
 
-const Experience = () => {
-  const [activeFilter, setActiveFilter] = useState<'all' | 'work' | 'education' | 'certificate'>('all');
+const ExperienceSection = () => {
+  const [activeFilter, setActiveFilter] = useState<'work' | 'certificate'>('work');
   
-  const filteredExperiences = activeFilter === 'all' 
-    ? experiences 
-    : experiences.filter(exp => exp.type === activeFilter);
+  const filteredExperiences = experiences.filter(exp => exp.type === activeFilter);
 
   return (
     <section id="experience" className="py-20 bg-[#050505] relative overflow-hidden">
@@ -100,7 +98,7 @@ const Experience = () => {
             <GradientText>Experiences and Certifications</GradientText>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            A showcase of my professional journey and industry qualifications in network engineering, database administration, and full-stack development
+            A showcase of my professional journey and industry qualifications
           </p>
         </motion.div>
 
@@ -111,16 +109,6 @@ const Experience = () => {
           className="flex flex-wrap justify-center gap-3 mb-12"
         >
           <button
-            onClick={() => setActiveFilter('all')}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
-              activeFilter === 'all'
-                ? 'bg-gradient-to-r from-[#FF512F] to-[#DD2476] text-white shadow-lg shadow-[#FF512F]/20'
-                : 'bg-[#1A1A1A] text-gray-400 hover:text-white'
-            }`}
-          >
-            All Experience
-          </button>
-          <button
             onClick={() => setActiveFilter('work')}
             className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
               activeFilter === 'work'
@@ -128,7 +116,7 @@ const Experience = () => {
                 : 'bg-[#1A1A1A] text-gray-400 hover:text-white'
             }`}
           >
-            Work
+            Experience
           </button>
           <button
             onClick={() => setActiveFilter('certificate')}
@@ -191,11 +179,9 @@ const Experience = () => {
                         <span className={`inline-flex items-center gap-1 px-2.5 py-1 text-xs rounded-full text-white ${
                           exp.type === 'work' 
                             ? 'bg-gradient-to-r from-[#FF512F]/20 to-[#DD2476]/20' 
-                            : exp.type === 'certificate'
-                              ? 'bg-gradient-to-r from-[#FF512F]/20 to-[#DD2476]/20'
-                              : 'bg-[#1A1A1A]'
+                            : 'bg-gradient-to-r from-[#FF512F]/20 to-[#DD2476]/20'
                         }`}>
-                          {exp.type === 'work' ? 'Work Experience' : exp.type === 'certificate' ? 'Certification' : 'Education'}
+                          {exp.type === 'work' ? 'Experience' : 'Certification'}
                         </span>
                       </div>
 
@@ -224,4 +210,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default ExperienceSection;
