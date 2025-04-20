@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Mail, Twitter, Heart, ArrowUp } from 'lucide-react';
+import { Github, Linkedin, Mail, Heart, ArrowUp } from 'lucide-react';
 import GradientText from './ui/GradientText';
 
 const navigationLinks = [
@@ -12,9 +12,17 @@ const navigationLinks = [
 
 const socialLinks = [
   { icon: Github, href: 'https://github.com/islem-zaraa', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-  { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/islem-zaraa', label: 'LinkedIn' },
   { icon: Mail, href: 'mailto:islemzaraapro@gmail.com', label: 'Email' },
+];
+
+const skillsList = [
+  'Network Engineering',
+  'Cybersecurity',
+  'System Architecture',
+  'Full-Stack Development',
+  'React & Next.js',
+  'Python & DevOps'
 ];
 
 const Footer = () => {
@@ -75,12 +83,18 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="text-white font-semibold mb-4">Contact</h4>
-            <ul className="space-y-3 text-gray-400">
-              <li>San Francisco, CA</li>
-              <li>islemzaraapro@gmail.com</li>
-              <li>+1 (234) 567-890</li>
+            <h4 className="text-white font-semibold mb-4">Skills</h4>
+            <ul className="space-y-2">
+              {skillsList.map((skill, index) => (
+                <li key={index} className="text-gray-400 flex items-center gap-1">
+                  <span className="w-1 h-1 rounded-full bg-[#FF512F]"></span>
+                  {skill}
+                </li>
+              ))}
             </ul>
+            <div className="mt-4 text-gray-400">
+              <p>islemzaraapro@gmail.com</p>
+            </div>
           </div>
         </div>
         
