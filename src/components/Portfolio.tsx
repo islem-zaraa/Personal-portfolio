@@ -97,7 +97,7 @@ const Portfolio = () => {
         >
           <h2 className="text-4xl font-bold mb-4">
             <GradientText>Featured Projects</GradientText>
-          </h2>
+        </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             A collection of my latest work showcasing my skills in various technologies and domains
           </p>
@@ -148,55 +148,55 @@ const Portfolio = () => {
               
               <div className="relative bg-[#0A0A0A] rounded-2xl h-full flex flex-col border border-[#1A1A1A] group-hover:border-transparent transition-colors z-10">
                 <div className="relative aspect-[16/10] overflow-hidden rounded-t-2xl">
-                  <img
-                    src={project.image}
-                    alt={project.title}
+                <img
+                  src={project.image}
+                  alt={project.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
+                />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] to-transparent opacity-80"></div>
                   <div className="absolute top-4 left-4 px-3 py-1.5 text-xs font-medium bg-[#1A1A1A]/80 backdrop-blur-sm text-white rounded-full flex items-center gap-2">
                     <project.icon className="w-3.5 h-3.5 text-[#FF512F]" />
                     {project.category}
                   </div>
-                </div>
+              </div>
                 
                 <div className="p-6 flex flex-col flex-1">
                   <h3 className="text-xl font-semibold mb-2 group-hover:text-[#FF512F] transition-colors">{project.title}</h3>
                   <p className="text-gray-400 mb-6 text-sm">{project.description}</p>
                   
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {project.tags.map((tag, i) => (
-                      <span
-                        key={i}
+                  {project.tags.map((tag, i) => (
+                    <span
+                      key={i}
                         className="px-2.5 py-1 text-xs rounded-full bg-[#1A1A1A] text-gray-300 border border-[#333333]"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
                   
                   <div className="flex gap-4 mt-auto">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                       className="flex items-center gap-2 text-sm text-white py-2 px-4 rounded-full bg-[#1A1A1A] hover:bg-[#FF512F]/20 transition-colors duration-300 hover:text-[#FF512F]"
-                    >
-                      <Github className="w-4 h-4" />
-                      Code
-                    </a>
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                  >
+                    <Github className="w-4 h-4" />
+                    Code
+                  </a>
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
                       className="flex items-center gap-2 text-sm text-white py-2 px-4 rounded-full bg-gradient-to-r from-[#FF512F] to-[#DD2476] hover:shadow-lg hover:shadow-[#FF512F]/20 transition-all duration-300"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      Live Demo
-                    </a>
-                  </div>
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    Live Demo
+                  </a>
                 </div>
               </div>
+            </div>
             </motion.div>
           ))}
         </div>

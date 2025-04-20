@@ -63,7 +63,7 @@ const Portfolio = () => {
   
   return (
     <section id="work" className="py-20 bg-[#050505] overflow-hidden">
-      <div className="container mx-auto px-6">
+    <div className="container mx-auto px-6">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -71,14 +71,14 @@ const Portfolio = () => {
           className="text-center mb-12"
         >
           <h2 className="text-4xl font-bold mb-4">
-            <GradientText>Featured Projects</GradientText>
-          </h2>
+        <GradientText>Featured Projects</GradientText>
+      </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Explore a selection of my professional projects that demonstrate my expertise in Network Engineering, Database Administration, and Full Stack Development.
+            Explore a selection of my professional projects that demonstrate my expertise
           </p>
         </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {displayedProjects.map((project, index) => (
             <motion.div
               key={index}
@@ -94,8 +94,8 @@ const Portfolio = () => {
                 isHovered={hoveredProject === index}
               />
             </motion.div>
-          ))}
-        </div>
+        ))}
+      </div>
         
         {/* Show More/Less Button */}
         {projects.length > 3 && (
@@ -113,9 +113,9 @@ const Portfolio = () => {
             </button>
           </motion.div>
         )}
-      </div>
-    </section>
-  );
+    </div>
+  </section>
+);
 };
 
 export default Portfolio;

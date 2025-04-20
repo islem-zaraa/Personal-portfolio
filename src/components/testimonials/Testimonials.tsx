@@ -133,9 +133,9 @@ const Testimonials = () => {
               className="grid grid-cols-1 md:grid-cols-2 gap-10"
             >
               {currentTestimonials.map((testimonial, index) => (
-                <motion.div
+          <motion.div
                   key={index + currentPage * 2}
-                  initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.1 }}
                   whileHover={{ y: -5, boxShadow: "0 25px 50px -12px rgba(221, 36, 118, 0.25)" }}
@@ -143,36 +143,36 @@ const Testimonials = () => {
                   style={{ 
                     boxShadow: "0 15px 30px -15px rgba(221, 36, 118, 0.15)" 
                   }}
-                >
+          >
                   {/* Gradient border with shadow */}
                   <div className="absolute -inset-0.5 bg-gradient-to-r from-[#FF512F] to-[#DD2476] rounded-2xl opacity-20 group-hover:opacity-100 blur transition duration-500 shadow-xl" />
-                  
-                  {/* Content */}
-                  <div className="relative bg-[#0A0A0A] p-8 rounded-2xl">
-                    <Quote className="w-10 h-10 text-[#FF512F] opacity-20 mb-4 group-hover:opacity-100 transition-opacity" />
-                    
-                    <p className="text-gray-300 mb-8 leading-relaxed">
-                      "{testimonial.text}"
-                    </p>
-                    
-                    <div className="flex items-center gap-4">
-                      <img
-                        src={testimonial.image}
-                        alt={testimonial.author}
-                        className="w-12 h-12 rounded-full object-cover ring-2 ring-[#FF512F]/20 group-hover:ring-[#FF512F] transition-all"
-                      />
-                      <div>
-                        <h3 className="font-semibold text-white group-hover:text-[#FF512F] transition-colors">
-                          {testimonial.author}
-                        </h3>
-                        <p className="text-sm text-gray-400">
-                          {testimonial.position} • {testimonial.company}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
+            
+            {/* Content */}
+            <div className="relative bg-[#0A0A0A] p-8 rounded-2xl">
+              <Quote className="w-10 h-10 text-[#FF512F] opacity-20 mb-4 group-hover:opacity-100 transition-opacity" />
+              
+              <p className="text-gray-300 mb-8 leading-relaxed">
+                "{testimonial.text}"
+              </p>
+              
+              <div className="flex items-center gap-4">
+                <img
+                  src={testimonial.image}
+                  alt={testimonial.author}
+                  className="w-12 h-12 rounded-full object-cover ring-2 ring-[#FF512F]/20 group-hover:ring-[#FF512F] transition-all"
+                />
+                <div>
+                  <h3 className="font-semibold text-white group-hover:text-[#FF512F] transition-colors">
+                    {testimonial.author}
+                  </h3>
+                  <p className="text-sm text-gray-400">
+                    {testimonial.position} • {testimonial.company}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        ))}
             </motion.div>
           </AnimatePresence>
           
@@ -194,7 +194,7 @@ const Testimonials = () => {
               />
             ))}
           </div>
-        </div>
+      </div>
     </div>
   </section>
 );

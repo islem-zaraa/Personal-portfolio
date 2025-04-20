@@ -52,7 +52,7 @@ const Footer = () => {
                   className="bg-[#0D0D0D] p-2 rounded-full hover:bg-[#1A1A1A] hover:text-[#FF512F] transition-all duration-300"
                 >
                   <link.icon className="w-5 h-5" />
-                </a>
+            </a>
               ))}
             </div>
           </div>

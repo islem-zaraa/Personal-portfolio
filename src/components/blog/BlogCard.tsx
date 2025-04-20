@@ -22,37 +22,37 @@ const BlogCard = ({ title, excerpt, date, readTime, image, link, icon: Icon, cat
     <div className="absolute -inset-0.5 bg-gradient-to-r from-[#FF512F] to-[#DD2476] rounded-2xl opacity-0 group-hover:opacity-100 blur-sm transition-all duration-300 z-0"></div>
     <div className="relative bg-[#0A0A0A] rounded-2xl h-full flex flex-col border border-[#1A1A1A] group-hover:border-transparent transition-colors z-10">
       <div className="relative aspect-[16/10] overflow-hidden rounded-t-2xl">
-        <img
-          src={image}
-          alt={title}
+      <img
+        src={image}
+        alt={title}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-        />
+      />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] to-transparent opacity-80"></div>
         <div className="absolute top-4 left-4 px-3 py-1.5 text-xs font-medium bg-[#1A1A1A]/80 backdrop-blur-sm text-white rounded-full flex items-center gap-2">
           <Icon className="w-3.5 h-3.5 text-[#FF512F]" />
           {category}
         </div>
-      </div>
+    </div>
       
       <div className="p-6 flex flex-col flex-1">
         <div className="flex items-center gap-3 text-xs text-gray-400 mb-3">
-          <span>{date}</span>
+        <span>{date}</span>
           <span className="w-1 h-1 rounded-full bg-gray-500"></span>
-          <span>{readTime}</span>
-        </div>
+        <span>{readTime}</span>
+      </div>
         
         <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-[#FF512F] group-hover:to-[#DD2476] transition-colors">
-          {title}
-        </h3>
+        {title}
+      </h3>
         
         <p className="text-gray-400 text-sm mb-6 line-clamp-3">{excerpt}</p>
         
-        <a
-          href={link}
+      <a
+        href={link}
           className="mt-auto inline-flex items-center gap-2 text-sm text-white py-2 px-4 rounded-full bg-[#1A1A1A] hover:bg-[#FF512F]/20 transition-colors duration-300 hover:text-[#FF512F]"
-        >
+      >
           Read Article <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-        </a>
+      </a>
       </div>
     </div>
   </motion.div>

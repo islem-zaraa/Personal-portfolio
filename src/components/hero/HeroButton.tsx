@@ -18,19 +18,19 @@ const HeroButton = ({ href, children, primary, secondary }: HeroButtonProps) => 
     : `${baseClasses} bg-[#1A1A1A] text-gray-300 hover:bg-[#222] hover:text-white`;
 
   return (
-    <a
-      href={href}
+  <a
+    href={href}
       className={buttonClasses}
-    >
+  >
       <span className="relative z-10 transition-colors">
-        {children}
-      </span>
+      {children}
+    </span>
       <ArrowRight className={`w-5 h-5 ${primary ? 'text-white' : 'text-[#FF512F]'} group-hover:translate-x-1 transition-transform`} />
       {!primary && (
-        <div className="absolute inset-0 bg-gradient-to-r from-[#FF512F] to-[#DD2476] opacity-0 group-hover:opacity-10 transition-opacity" />
+    <div className="absolute inset-0 bg-gradient-to-r from-[#FF512F] to-[#DD2476] opacity-0 group-hover:opacity-10 transition-opacity" />
       )}
-    </a>
-  );
+  </a>
+);
 };
 
 export default HeroButton;

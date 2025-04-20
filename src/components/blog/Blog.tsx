@@ -100,7 +100,7 @@ const Blog = () => {
             <GradientText>Latest Articles</GradientText>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Insights and tutorials on network engineering, database optimization, and full-stack development
+            Insights and tutorials
           </p>
         </motion.div>
         
