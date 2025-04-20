@@ -14,7 +14,7 @@ import {
   Braces,
   Brackets,
   Bug,
-  Database,
+  Database, 
   Hash
 } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -28,8 +28,14 @@ const Hero = () => {
   // Simple array of phrases that cycle through the typewriter
   const titles = [
     "Network Engineer & Cybersecurity Analyst",
-    "welcome",
-    "thanks"
+    "Professional Bug Creator & Fixer",
+    "Coffee to Code Converter",
+    "404: Sleep Not Found",
+    "Turning Coffee into Code Since 2015",
+    "Chief Keyboard Smasher",
+    "Sudo Make Me a Sandwich Expert",
+    "I Speak Fluent Binary... 01101010/01101011",
+    "Professional Googler with Tech Skills"
   ];
 
   const textVariants = {
@@ -46,11 +52,11 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-24 md:pt-32">
-      <BackgroundGrid />
-      
-      <div className="glow top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2" />
-      <div className="glow bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2" />
+  <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-24 md:pt-32">
+    <BackgroundGrid />
+    
+    <div className="glow top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2" />
+    <div className="glow bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2" />
 
       {/* Layer 1 - Original icons */}
       <FloatingIcon Icon={Code} position="top-1/4 left-1/4" delay={0} />
@@ -72,8 +78,8 @@ const Hero = () => {
       <FloatingIcon Icon={Monitor} position="top-3/4 left-1/4" delay={2.8} />
       <FloatingIcon Icon={Database} position="bottom-3/4 right-1/3" delay={3.9} />
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
+    <div className="container mx-auto px-6 relative z-10">
+      <div className="max-w-4xl mx-auto text-center">
           <motion.h1 
             className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
             initial="hidden"
@@ -81,7 +87,7 @@ const Hero = () => {
             variants={textVariants}
             custom={0}
           >
-            <GradientText>Islem Zaraa</GradientText>
+          <GradientText>Islem Zaraa</GradientText>
           </motion.h1>
           
           <motion.h2 
@@ -116,7 +122,7 @@ const Hero = () => {
                 className="px-4 py-2 rounded-full bg-gradient-to-r from-[#191919] to-[#0D0D0D] text-gray-300 text-sm border border-[#333] shadow-lg"
               >
                 {skill}
-              </span>
+          </span>
             ))}
           </motion.div>
           
@@ -153,8 +159,8 @@ const Hero = () => {
       
       {/* Radial gradient overlay for depth */}
       <div className="absolute inset-0 bg-radial-gradient opacity-60 pointer-events-none" />
-    </section>
-  );
+  </section>
+);
 };
 
 export default Hero;
