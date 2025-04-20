@@ -133,8 +133,8 @@ const Hero = () => {
             variants={textVariants}
             custom={3}
           >
-            Securing networks, optimizing databases, and protecting digital assets with
-            cutting-edge solutions and industry best practices.
+            Turning caffeine into code, bugs into features, and impossible deadlines into reality.
+            No network is too complex, no database too messy, no problem too weird.
           </motion.p>
           
           <motion.div
