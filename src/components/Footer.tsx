@@ -17,12 +17,15 @@ const socialLinks = [
 ];
 
 const skillsList = [
-  'Network Engineering',
-  'Cybersecurity',
-  'System Architecture',
-  'Full-Stack Development',
+  'Network Security',
+  'Cloud Infrastructure',
+  'Web Development',
+  'CI/CD Pipelines',
   'React & Next.js',
-  'Python & DevOps'
+  'TypeScript',
+  'Python',
+  'Cybersecurity',
+  'System Design'
 ];
 
 const Footer = () => {
@@ -83,7 +86,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="text-white font-semibold mb-4">Skills</h4>
+            <h4 className="text-white font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
               {skillsList.map((skill, index) => (
                 <li key={index} className="text-gray-400 flex items-center gap-1">
