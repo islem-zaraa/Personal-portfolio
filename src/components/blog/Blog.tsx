@@ -70,12 +70,18 @@ const blogPosts: BlogPost[] = [
 
 const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [showAll, setShowAll] = useState(false);
   
   const categories = [...new Set(blogPosts.map(post => post.category))];
   
   const filteredPosts = selectedCategory 
     ? blogPosts.filter(post => post.category === selectedCategory)
     : blogPosts;
+    
+  // Limit posts to 3 initially when not filtering by category
+  const displayedPosts = (showAll || selectedCategory) 
+    ? filteredPosts 
+    : filteredPosts.slice(0, 3);
 
   return (
     <section id="blog" className="py-20 bg-[#050505] relative overflow-hidden">
@@ -130,7 +136,7 @@ const Blog = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredPosts.map((post, index) => (
+          {displayedPosts.map((post, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
@@ -143,22 +149,23 @@ const Blog = () => {
           ))}
         </div>
         
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-          className="flex justify-center mt-12"
-        >
-          <a 
-            href="#" 
-            className="group relative inline-flex items-center gap-2 px-6 py-3 bg-[#1A1A1A] text-white rounded-full overflow-hidden hover:bg-[#0D0D0D] transition-colors duration-300"
+        {/* Show More/Less Button - Only show if we're not filtering and there are more than 3 posts */}
+        {!selectedCategory && filteredPosts.length > 3 && (
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="flex justify-center mt-12"
           >
-            <BookOpen className="w-4 h-4" />
-            <span>View All Articles</span>
-            <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#FF512F] to-[#DD2476] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-          </a>
-        </motion.div>
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="px-6 py-3 rounded-full text-white font-medium bg-gradient-to-r from-[#FF512F] to-[#DD2476] hover:shadow-lg hover:shadow-[#FF512F]/20 transition-all duration-300"
+            >
+              {showAll ? 'Show Less' : 'Show More Articles'}
+            </button>
+          </motion.div>
+        )}
       </div>
     </section>
   );
