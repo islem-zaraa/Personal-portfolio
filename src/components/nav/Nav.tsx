@@ -10,8 +10,12 @@ const Nav = () => {
             <div className="flex items-center gap-6 md:gap-10">
               <NavLink href="#home">Home</NavLink>
               <NavLink href="#skills">Skills</NavLink>
-              <NavLink href="#work">Work</NavLink>
-              <NavLink href="#experience">Experience</NavLink>
+              <span className="hidden md:block">
+                <NavLink href="#work">Work</NavLink>
+              </span>
+              <span className="hidden md:block">
+                <NavLink href="#experience">Experience</NavLink>
+              </span>
               <NavLink href="#blog">Blog</NavLink>
               <NavLink href="#contact">Contact</NavLink>
             </div>
