@@ -133,8 +133,8 @@ const Hero = () => {
             variants={textVariants}
             custom={3}
           >
-            Turning caffeine into code, bugs into features, and impossible deadlines into reality.
-            No network is too complex, no database too messy, no problem too weird.
+            Dedicated to delivering robust solutions in network security, database optimization, 
+            and software development with a focus on performance, reliability, and innovation.
           </motion.p>
           
           <motion.div
