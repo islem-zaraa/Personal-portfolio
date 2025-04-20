@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import GradientText from '../ui/GradientText';
 import BlogCard from './BlogCard';
 import { motion } from 'framer-motion';
-import { BookOpen, FileText, Lock, Code, Server } from 'lucide-react';
+import { BookOpen, FileText, Database, Code, Server, Network, Layout, Globe } from 'lucide-react';
 
 interface BlogPost {
   title: string;
@@ -17,54 +17,54 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
-    title: "The Future of Network Security: AI and Machine Learning",
-    excerpt: "Exploring how artificial intelligence is revolutionizing network security and threat detection...",
-    date: "Feb 15, 2024",
-    readTime: "5 min read",
+    title: "Modern Network Architecture Patterns",
+    excerpt: "Exploring efficient network design principles for enterprise environments with scalability in mind...",
+    date: "Mar 10, 2024",
+    readTime: "6 min read",
     image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
     link: "#",
-    icon: Server,
-    category: "Security"
+    icon: Network,
+    category: "Network Engineering"
   },
   {
-    title: "Essential Cybersecurity Practices for Remote Work",
-    excerpt: "Best practices and tools to ensure secure remote work environments...",
-    date: "Feb 10, 2024",
-    readTime: "4 min read",
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3",
-    link: "#",
-    icon: Lock,
-    category: "Cybersecurity"
-  },
-  {
-    title: "Understanding Zero Trust Architecture",
-    excerpt: "A comprehensive guide to implementing zero trust security models in modern networks...",
-    date: "Jan 28, 2024",
-    readTime: "7 min read",
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5",
-    link: "#",
-    icon: Lock,
-    category: "Security"
-  },
-  {
-    title: "Cloud Infrastructure Security Best Practices",
-    excerpt: "Key strategies for securing your cloud infrastructure against emerging threats...",
-    date: "Jan 15, 2024",
-    readTime: "6 min read",
+    title: "Optimizing Database Performance",
+    excerpt: "Advanced techniques for improving query performance and database responsiveness...",
+    date: "Feb 28, 2024",
+    readTime: "5 min read",
     image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8",
     link: "#",
-    icon: Server,
-    category: "Cloud"
+    icon: Database,
+    category: "Database Administration"
   },
   {
-    title: "Modern Database Security Techniques",
-    excerpt: "Protecting your data assets with advanced security protocols and encryption...",
-    date: "Dec 22, 2023",
-    readTime: "5 min read",
+    title: "Building Responsive UI with React and Tailwind",
+    excerpt: "A comprehensive guide to creating modern user interfaces with React and Tailwind CSS...",
+    date: "Feb 15, 2024",
+    readTime: "8 min read",
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
+    link: "#",
+    icon: Layout,
+    category: "Full-stack Dev"
+  },
+  {
+    title: "Network Monitoring Best Practices",
+    excerpt: "Key strategies for effective network monitoring and performance optimization...",
+    date: "Jan 30, 2024",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3",
+    link: "#",
+    icon: Server,
+    category: "Network Engineering"
+  },
+  {
+    title: "Working with NoSQL vs SQL Databases",
+    excerpt: "Comparing relational and non-relational database approaches for different use cases...",
+    date: "Jan 15, 2024",
+    readTime: "6 min read",
     image: "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f",
     link: "#",
-    icon: Code,
-    category: "Database"
+    icon: Database,
+    category: "Database Administration"
   }
 ];
 
@@ -94,7 +94,7 @@ const Blog = () => {
             <GradientText>Latest Articles</GradientText>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Sharing insights and expertise on network security, cybersecurity, and technology trends
+            Insights and tutorials on network engineering, database optimization, and full-stack development
           </p>
         </motion.div>
         
