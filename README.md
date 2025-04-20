@@ -8,7 +8,7 @@ Welcome to my personal portfolio project! This repository is a modern and profes
 - **Dynamic Components**: Modular and reusable components for streamlined development.
 - **Project Showcase**: A dedicated section to highlight projects with detailed descriptions and links.
 - **Interactive Animations**: Smooth transitions and engaging animations powered by modern libraries.
-- **Contact Form**: Easily reach out via an integrated contact form.
+- **Contact Form**: Easily reach out via an integrated contact form with EmailJS integration.
 - **Security Focused**: Implements modern web security best practices.
 
 ## Tech Stack
@@ -175,6 +175,35 @@ If you have any questions or suggestions, feel free to reach out:
 - **Email**: islemzaraapro@gmail.com
 - **LinkedIn**: [LinkedIn Profile](https://linkedin.com/in/islem-zaraa)
 - **GitHub**: [islem-zaraa](https://github.com/islem-zaraa)
+
+## Setting Up the Contact Form
+
+The contact form is configured to work with [EmailJS](https://www.emailjs.com/), which allows sending emails directly from client-side JavaScript. To set up the contact form:
+
+1. **Create an EmailJS Account**:
+   - Sign up at [emailjs.com](https://www.emailjs.com/)
+   - Create a new Email Service (Gmail, Outlook, etc.)
+   - Create a new Email Template with the following template variables:
+     - `from_name`: Sender's name
+     - `from_email`: Sender's email
+     - `message`: Email content
+     - `to_email`: Recipient email (pre-configured in the form)
+
+2. **Configure Environment Variables**:
+   Create a `.env.local` file in the project root with these variables:
+   ```
+   VITE_EMAILJS_SERVICE_ID=your_service_id
+   VITE_EMAILJS_TEMPLATE_ID=your_template_id
+   VITE_EMAILJS_PUBLIC_KEY=your_public_key
+   ```
+
+3. **Customize the Recipient**:
+   - By default, all form submissions are sent to `islemzaraapro@gmail.com`
+   - To change this, update the `to_email` value in the `formData` state in `src/components/contact/ContactForm.tsx`
+
+4. **Testing**:
+   - Submit the form with test data to verify the setup
+   - Check your email service to confirm receipt
 
 ---
 
