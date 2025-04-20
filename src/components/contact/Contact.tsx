@@ -2,7 +2,7 @@ import React from 'react';
 import GradientText from '../ui/GradientText';
 import ContactForm from './ContactForm';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Linkedin, Github, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Github } from 'lucide-react';
 
 const contactInfo = [
   {
@@ -14,14 +14,14 @@ const contactInfo = [
   {
     icon: Phone,
     label: 'Phone',
-    value: '+1 (234) 567-890',
-    href: 'tel:+12345678901'
+    value: '+213 555 888 119',
+    href: 'tel:+213555888119'
   },
   {
     icon: MapPin,
     label: 'Location',
-    value: 'San Francisco, CA',
-    href: 'https://maps.google.com/?q=San+Francisco,+CA'
+    value: 'Tebessa, DZ',
+    href: 'https://maps.google.com/?q=Tebessa,+Algeria'
   }
 ];
 
@@ -34,15 +34,9 @@ const socialLinks = [
   },
   {
     icon: Linkedin,
-    href: 'https://linkedin.com/',
+    href: 'https://www.linkedin.com/in/islem-zaraa',
     label: 'LinkedIn',
     color: 'hover:text-blue-400'
-  },
-  {
-    icon: Twitter,
-    href: 'https://twitter.com/',
-    label: 'Twitter',
-    color: 'hover:text-blue-500'
   }
 ];
 
@@ -70,27 +64,27 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-20 bg-[#050505] relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
+    {/* Animated background elements */}
+    <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-[30rem] h-[30rem] bg-gradient-to-r from-[#FF512F] to-[#DD2476] rounded-full blur-[150px] opacity-20 animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-[30rem] h-[30rem] bg-gradient-to-r from-[#DD2476] to-[#FF512F] rounded-full blur-[150px] opacity-20 animate-pulse delay-1000" />
-      </div>
+    </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+    <div className="container mx-auto px-6 relative z-10">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
           className="text-center mb-16"
-        >
-          <h2 className="text-4xl font-bold mb-4">
+      >
+        <h2 className="text-4xl font-bold mb-4">
             <GradientText>Get In Touch</GradientText>
-          </h2>
+        </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Have a project in mind or want to discuss potential collaborations?
+          Have a project in mind or want to discuss potential collaborations?
             I'm always open to new opportunities and exciting challenges.
-          </p>
+        </p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 max-w-6xl mx-auto">
@@ -146,30 +140,30 @@ const Contact = () => {
                 ))}
               </div>
             </motion.div>
-          </motion.div>
+      </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.2 }}
             className="lg:col-span-3"
-          >
-            <div className="relative group">
-              {/* Gradient border effect */}
+      >
+        <div className="relative group">
+          {/* Gradient border effect */}
               <div className="absolute -inset-0.5 bg-gradient-to-r from-[#FF512F] to-[#DD2476] rounded-2xl blur opacity-30 group-hover:opacity-70 transition duration-1000"></div>
-              
-              {/* Main card */}
+          
+          {/* Main card */}
               <div className="relative bg-[#0A0A0A] rounded-2xl p-8 shadow-xl border border-[#1A1A1A] group-hover:border-transparent transition-colors">
                 <h3 className="text-xl font-semibold text-white mb-6">Send Me a Message</h3>
-                <ContactForm />
-              </div>
-            </div>
-          </motion.div>
+            <ContactForm />
+          </div>
         </div>
-      </div>
-    </section>
-  );
+      </motion.div>
+        </div>
+    </div>
+  </section>
+);
 };
 
 export default Contact;
