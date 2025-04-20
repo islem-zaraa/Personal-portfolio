@@ -21,7 +21,7 @@ const blogPosts: BlogPost[] = [
     excerpt: "Exploring efficient network design principles for enterprise environments with scalability in mind...",
     date: "Mar 10, 2024",
     readTime: "6 min read",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
+    image: "https://cdn.pixabay.com/photo/2018/03/27/21/43/startup-3267505_1280.jpg",
     link: "#",
     icon: Network,
     category: "Network Engineering"
@@ -31,7 +31,7 @@ const blogPosts: BlogPost[] = [
     excerpt: "Advanced techniques for improving query performance and database responsiveness...",
     date: "Feb 28, 2024",
     readTime: "5 min read",
-    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8",
+    image: "https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825_1280.jpg",
     link: "#",
     icon: Database,
     category: "Database Administration"
@@ -41,7 +41,7 @@ const blogPosts: BlogPost[] = [
     excerpt: "A comprehensive guide to creating modern user interfaces with React and Tailwind CSS...",
     date: "Feb 15, 2024",
     readTime: "8 min read",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c",
+    image: "https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg",
     link: "#",
     icon: Layout,
     category: "Full-stack Dev"
@@ -51,7 +51,7 @@ const blogPosts: BlogPost[] = [
     excerpt: "Key strategies for effective network monitoring and performance optimization...",
     date: "Jan 30, 2024",
     readTime: "7 min read",
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3",
+    image: "https://cdn.pixabay.com/photo/2016/11/27/21/42/stock-1863880_1280.jpg",
     link: "#",
     icon: Server,
     category: "Network Engineering"
@@ -61,7 +61,7 @@ const blogPosts: BlogPost[] = [
     excerpt: "Comparing relational and non-relational database approaches for different use cases...",
     date: "Jan 15, 2024",
     readTime: "6 min read",
-    image: "https://images.unsplash.com/photo-1558346490-a72e53ae2d4f",
+    image: "https://cdn.pixabay.com/photo/2015/01/08/18/25/desk-593327_1280.jpg",
     link: "#",
     icon: Database,
     category: "Database Administration"
@@ -97,8 +97,8 @@ const Blog = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold mb-4">
-            <GradientText>Latest Articles</GradientText>
-          </h2>
+        <GradientText>Latest Articles</GradientText>
+      </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Insights and tutorials
           </p>
@@ -135,10 +135,10 @@ const Blog = () => {
           ))}
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {displayedPosts.map((post, index) => (
-            <motion.div
-              key={index}
+          <motion.div
+            key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -166,9 +166,9 @@ const Blog = () => {
             </button>
           </motion.div>
         )}
-      </div>
-    </section>
-  );
+    </div>
+  </section>
+);
 };
 
 export default Blog;

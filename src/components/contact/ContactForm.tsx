@@ -4,13 +4,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const ContactForm = () => {
   const [status, setStatus] = useState<'idle' | 'success'>('idle');
-  
+
   // FormSubmit.co will handle form submission directly
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     // We don't prevent default since we want the form to actually submit to FormSubmit.co
     
     // Show success message
-    setStatus('success');
+      setStatus('success');
     
     // Reset success message after 5 seconds
     setTimeout(() => {
@@ -133,12 +133,12 @@ const ContactForm = () => {
         type="submit"
         className="w-full px-6 py-3 rounded-lg bg-gradient-to-r from-[#FF512F] to-[#DD2476] text-white font-medium hover:opacity-90 transition-opacity flex items-center justify-center gap-2 group"
       >
-        Send Message
-        <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            Send Message
+            <Send className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
       </motion.button>
 
       <AnimatePresence>
-        {status === 'success' && (
+      {status === 'success' && (
           <motion.div
             variants={successVariants}
             initial="hidden"
@@ -172,7 +172,7 @@ const ContactForm = () => {
             <motion.div
               variants={iconVariants}
               className="relative mb-4"
-            >
+        >
               <div className="absolute inset-0 rounded-full bg-[#FF512F]/20 blur-xl scale-150"></div>
               <div className="bg-gradient-to-r from-[#FF512F] to-[#DD2476] p-3 rounded-full relative">
                 <CheckCircle2 size={40} className="text-white" />
@@ -187,14 +187,14 @@ const ContactForm = () => {
               Message Sent!
             </motion.h3>
             
-            <motion.p
+        <motion.p
               variants={iconVariants}
               className="text-gray-300 text-center max-w-xs px-6 relative"
-            >
+        >
               Thanks for reaching out! I'll get back to you as soon as possible.
-            </motion.p>
+        </motion.p>
           </motion.div>
-        )}
+      )}
       </AnimatePresence>
     </form>
   );

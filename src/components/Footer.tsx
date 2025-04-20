@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Mail, Heart, ArrowUp } from 'lucide-react';
+import { Github, Linkedin, Mail, Heart, ArrowUp, Star } from 'lucide-react';
 import GradientText from './ui/GradientText';
 
 const navigationLinks = [
@@ -29,6 +29,9 @@ const skillsList = [
 ];
 
 const Footer = () => {
+  // Force component to update
+  console.log("Footer rendering - " + new Date().toISOString());
+  
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -37,7 +40,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="pt-12 pb-6 bg-[#050505] relative">
+    <footer className="pt-12 pb-6 bg-[#050505] relative" id="footer-component">
       {/* Gradient divider */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#FF512F]/50 to-transparent" />
       
@@ -69,7 +72,10 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="text-white font-semibold mb-4">Navigation</h4>
+            <h4 className="text-white font-semibold mb-4 flex items-center gap-2">
+              Navigation
+              <Star className="w-4 h-4 text-[#FF512F]" fill="#FF512F" />
+            </h4>
             <ul className="space-y-2">
               {navigationLinks.map((link, index) => (
                 <li key={index}>
@@ -86,7 +92,10 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="text-white font-semibold mb-4">Services</h4>
+            <h4 className="text-white font-semibold mb-4 flex items-center gap-2">
+              Services
+              <Star className="w-4 h-4 text-[#FF512F]" fill="#FF512F" />
+            </h4>
             <ul className="space-y-2">
               {skillsList.map((skill, index) => (
                 <li key={index} className="text-gray-400 flex items-center gap-1">
@@ -107,7 +116,7 @@ const Footer = () => {
           <div className="flex items-center gap-2 text-gray-400 text-sm">
             <span>Crafted with</span>
             <Heart className="w-4 h-4 text-[#FF512F] animate-pulse" fill="#FF512F" />
-            <span>and modern tech</span>
+            <span>and modern technology</span>
           </div>
           
           <button 

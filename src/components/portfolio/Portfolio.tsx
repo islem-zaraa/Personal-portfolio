@@ -7,7 +7,7 @@ const projects = [
   {
     title: 'Network Security Dashboard',
     description: 'Real-time network monitoring system with threat detection and visualization capabilities',
-    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3',
+    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80',
     tags: ['Network Engineering', 'Security', 'React'],
     github: 'https://github.com',
     live: 'https://example.com'
@@ -15,7 +15,7 @@ const projects = [
   {
     title: 'Advanced Database Manager',
     description: 'Comprehensive solution for database management with performance optimization tools',
-    image: 'https://images.unsplash.com/photo-1489875347897-49f64b51c1f8',
+    image: 'https://images.unsplash.com/photo-1489875347897-49f64b51c1f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80',
     tags: ['Database', 'SQL', 'Backend'],
     github: 'https://github.com',
     live: 'https://example.com'
@@ -23,7 +23,7 @@ const projects = [
   {
     title: 'Responsive Portfolio Website',
     description: 'Modern portfolio website with responsive design and interactive elements',
-    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c',
+    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80',
     tags: ['Frontend', 'React', 'Tailwind'],
     github: 'https://github.com',
     live: 'https://example.com'
@@ -31,7 +31,7 @@ const projects = [
   {
     title: 'Secure VPN Solution',
     description: 'Enterprise-level VPN implementation with advanced encryption and access controls',
-    image: 'https://images.unsplash.com/photo-1563089145-599997674d42',
+    image: 'https://images.unsplash.com/photo-1563089145-599997674d42?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80',
     tags: ['Network Engineering', 'Security', 'Infrastructure'],
     github: 'https://github.com',
     live: 'https://example.com'
@@ -39,7 +39,7 @@ const projects = [
   {
     title: 'Data Visualization Platform',
     description: 'Interactive dashboard for visualizing complex datasets with real-time updates',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80',
     tags: ['Data', 'Frontend', 'D3.js'],
     github: 'https://github.com',
     live: 'https://example.com'
@@ -47,7 +47,7 @@ const projects = [
   {
     title: 'API Gateway Service',
     description: 'Centralized API management system with authentication and rate limiting',
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80',
     tags: ['Backend', 'API', 'Security'],
     github: 'https://github.com',
     live: 'https://example.com'
